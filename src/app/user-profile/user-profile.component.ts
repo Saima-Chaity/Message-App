@@ -15,20 +15,11 @@ export class UserProfileComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-
-    // this.authService.authenticateUser().subscribe(authUser => {
-    //   if (authUser) {
-    //     this.email = authUser.email;
-    //     this.status = 'Online';
-    //     this.profilePhoto = authUser['profilePhoto'];
-    //   }
-    // });
-
     this.authService.authenticateUser().subscribe(currentUser => {
       if (currentUser) {
         this.authService.getUserDetails(currentUser.uid).valueChanges().subscribe(authUser => {
           this.userName = authUser['userName'];
-          this.status = authUser['status'];
+          this.status = 'online';
           this.email = authUser['email'];
           this.profilePhoto = authUser['profilePhoto'];
         });

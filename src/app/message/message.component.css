@@ -1,17 +1,25 @@
 .sender{
-    border: 1px solid gainsboro;
     padding: 10px 10px;
-    background: skyblue;
-    margin: 10px 0px 10px 150px;
-    border-radius: 4%;
+    margin: 5px 0px 5px 150px;
+}
+
+.sender .messageContent{
+  background: lightskyblue;
+  border: 2px solid lightskyblue;
+  border-radius: 25px;
+  padding: 0px 10px;
 }
 
 .receiver{
-    border: 1px solid gainsboro;
     padding: 10px 10px;
-    background: salmon;
-    margin: 10px 150px 10px 0px;
-    border-radius: 4%;
+    margin: 5px 150px 5px 0px;
+}
+
+.receiver .messageContent{
+  background: Lavender ;
+  border: 2px solid Lavender;
+  border-radius: 25px;
+  padding: 0px 10px;
 }
 
 .messageDetails p{
@@ -31,7 +39,6 @@
 }
 
 .time{
-    font-weight: bold;
     padding: 0px 5px;
 }
 

@@ -1,15 +1,15 @@
 <div>
     <input class="message"
-    [(ngModel)]="message" 
+    [(ngModel)]="message"
     (keydown)="handleSubmit($event)"
     />
     <input class="file" type="file"
-    [(ngModel)]="file" 
+    [(ngModel)]="file"
     (keydown)="handleSubmit($event)"
-    (change)="onFileChanged($event)" 
-    />   
-    <img class="image" *ngIf= "url" [src]="url"> <br/>
+    (change)="onFileChanged($event)"
+    />
+    <img class="image" *ngIf= "url" [src]="url"><br/>
 
-    <button [disabled] = "!message && !file" (click)=send()>Send</button>  
+    <button class="btn btn-success" [disabled] = "!message && !file" (click)=send()>Send</button>
 </div>
 

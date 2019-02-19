@@ -1,4 +1,5 @@
 <div class="users">
+  <p>Available users</p>
   <div class="user" *ngFor = 'let user of users'>
     <span *ngIf= "user.status === 'online' && user.userName!=null" class="online"></span>
     <span *ngIf= "user.status === 'offline' && user.userName!=null" class="offline"></span>

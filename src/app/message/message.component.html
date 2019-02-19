@@ -3,15 +3,15 @@
       <img class="profilePhoto" *ngIf = "userImage" [src]="userImage"/>
       <img class="profilePhoto" *ngIf = "!userImage" src="assets/image/userImage.jpg"/>
   </div>
-  <p>{{messageContent}}</p>
+  <p *ngIf = "messageContent" class="messageContent">{{messageContent}}</p>
   <img class="image" *ngIf = "url" [src]="url"/>
-  <br>
   <div class="messageDetails">
-    <p>Sent By</p>
-    <p class="userName" *ngIf = "userEmail || userName">{{userName}}</p>
-    <p class="email" *ngIf = "!userName">{{userEmail}}</p>
-    <p class="time">{{timeStamp | date:'medium'}}</p>
+      <p>Sent By</p>
+      <p class="userName" *ngIf = "userEmail || userName">{{userName}}</p>
+      <p class="email" *ngIf = "!userName">{{userEmail}}</p>
+      <p class="time">{{timeStamp | date:'shortTime'}}</p>
   </div>
+  <br>
 </div>
 
 <div class="receiver" *ngIf="!isOwnMessage">
@@ -19,14 +19,13 @@
       <img class="profilePhoto" *ngIf = "userImage" [src]="userImage"/>
       <img class="profilePhoto" *ngIf = "!userImage" src="assets/image/userImage.jpg"/>
     </div>
-    <p>{{messageContent}}</p>
+    <p *ngIf = "messageContent" class="messageContent">{{messageContent}}</p>
     <img class="image" *ngIf = "url" [src]="url"/>
-  <br>
-  <div class="messageDetails">
-    <p>Sent By</p>
-    <p class="userName" *ngIf = "userEmail || userName">{{userName}}</p>
-    <p class="email" *ngIf = "!userName">{{userEmail}}</p>
-    <p class="time">{{timeStamp | date:'medium'}}</p>
+    <div class="messageDetails">
+        <p>Sent By</p>
+        <p class="userName" *ngIf = "userEmail || userName">{{userName}}</p>
+        <p class="email" *ngIf = "!userName">{{userEmail}}</p>
+        <p class="time">{{timeStamp | date:'shortTime'}}</p>
     </div>
+  <br>
 </div>
-  

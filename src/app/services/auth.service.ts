@@ -18,6 +18,7 @@ export class AuthService {
   invalidEmail: string;
   invalidPassword: string;
   uid: any;
+  signedInUserId: any;
 
   constructor(private afAuth: AngularFireAuth,
     private db: AngularFireDatabase,
@@ -37,6 +38,7 @@ export class AuthService {
   login(email: string, password: string) {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then((curresntuser) => {
+        this.uid = curresntuser.user.uid;
         this.authState = curresntuser;
         this.signupAttempt = 1;
         this.setUserSatus('online');
@@ -57,7 +59,7 @@ export class AuthService {
   signup(email: string, userName: string, password: string) {
     return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
       .then((signedInUser) => {
-        this.uid = signedInUser.user.uid;
+        this.signedInUserId = signedInUser.user.uid;
         this.signupAttempt = 1;
         this.authState = signedInUser;
         const status = 'online';
@@ -66,31 +68,14 @@ export class AuthService {
     });
   }
 
-//   firebase.auth().createUserWithEmailAndPassword(email, password) .then(function(user) {
-//     var root = firebase.database().ref();
-//     var uid = user.uid;
-//     var postData = {
-//        Firstname: fname,
-//        Lastname: lname,
-//        email: email
-//     };
-//     root.child("Users").child(uid).set(postData);
-//  })
-
   setUserData(email: string, userName: string, status: string) {
-    const path = `users/${this.currentUserId}`;
     const root = firebase.database().ref();
-    console.log(path);
     const data = {
       email: email,
       userName: userName,
       status: status,
     };
-
-    console.log(data);
-    root.child('users').child(this.uid).set(data);
-
-    // this.db.object(path).set(data);
+    root.child('users').child(this.signedInUserId).set(data);
   }
 
   get currentUserId(): string {
@@ -104,11 +89,11 @@ export class AuthService {
   }
 
   setUserSatus(status: string) {
-    const path = `users/${this.currentUserId}`;
+    const path = `users/${this.uid}`;
     const data = {
       status: status
     };
-    this.db.object(path).update(data);
+    return this.db.object(path).update(data);
   }
 
   saveProfileSettings(newPhoto: string, userId: string) {
