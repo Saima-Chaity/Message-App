@@ -1,0 +1,11 @@
+<div class="userProfile">
+  <img class="userImage" *ngIf= "profilePhoto" [src]="profilePhoto"/>
+  <img class="userImage" *ngIf= "!profilePhoto" src="assets/image/userImage.jpg"><br/>
+  <p>{{userName}}</p>
+  <p>{{email}}</p>
+  <span class="status"></span>
+  <span><p>{{status}}</p></span>
+  <br>
+  <a href="/profile">View Profile</a>
+</div>
+

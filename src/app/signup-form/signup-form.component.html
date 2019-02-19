@@ -1,0 +1,72 @@
+<div class="form">
+    <h2>Sign Up</h2>
+    <form #signupForm="ngForm">  
+      <div class="form-group">
+        <label>Email : </label>
+        <br>
+        <input 
+        type="email" name="userEmail"
+        #userEmail="ngModel"
+        placeholder="Enter your email address" 
+        [(ngModel)]="email" class="formInput"
+        maxlength="60" 
+        pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+        required/>
+        <div *ngIf= "userEmail.invalid && userEmail.touched || userEmail.pattern" class="alert alert-danger">
+          <div *ngIf="userEmail.errors.required">
+            Valid email is required.
+          </div>
+          <div *ngIf="userEmail.errors.pattern">
+            Did not match with the patter (example@example.com).
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Username : </label>
+        <br>
+        <input 
+        type="text" name="username"
+        #username= "ngModel"
+        placeholder="Enter your username" 
+        [(ngModel)]="userName" class="formInput"
+        maxlength="15" 
+        required/>
+        <div *ngIf= "username.invalid && username.touched || username.maxlength" class="alert alert-danger">
+          <div *ngIf="username.errors.required">
+            Username is required.
+          </div>
+          <div *ngIf="username.errors.maxlength">
+            Do not exceed max length of 15.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Password : </label>
+        <br>
+        <input 
+        type="password" name="userPassword"
+        #userPassword= "ngModel"
+        placeholder="Choose a password" 
+        [(ngModel)]="password" class="formInput" 
+        minlength="6"
+        required/>
+        <div *ngIf= "userPassword.invalid && userPassword.touched || userPassword.minlength" class="alert alert-danger">
+          <div *ngIf="userPassword.errors.required">
+            Password is required.
+          </div>
+          <div *ngIf="userPassword.errors.minlength">
+            Minimum length of six is required.
+          </div>
+        </div>
+      </div>
+
+      <button [disabled]="!signupForm.form.valid" 
+      type="submit" (click)="signup()"
+      class="btn btn-success">
+      Sign Up
+      </button>
+
+    </form>
+  </div>

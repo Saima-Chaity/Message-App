@@ -1,0 +1,30 @@
+.userProfile{
+    border: 1px solid gainsboro;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    height: 100%;
+    text-align: center;
+}
+
+.userImage{
+    border: 2px solid gainsboro;
+    width: 60%;
+    height: 90px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.status{
+    border: 1px solid green;
+    display: inline-block;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 50%;
+    background: green;
+}
+
+span p{
+    display: inline-block;
+    padding-left: 8px;
+}
+

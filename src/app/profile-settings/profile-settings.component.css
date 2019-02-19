@@ -1,0 +1,33 @@
+.image{
+    border: 2px solid gainsboro;
+    width: 20%;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+.file{
+    display: none;
+}
+
+label{
+    border-style: none;
+}
+
+.defaultImage{
+    width: 100%;
+    height: 240px;
+    border-radius: 50%;
+    margin-top: 0px;
+}
+
+.userProfile{
+    text-align: center;
+}
+
+.userImage{
+    width: 100%;
+    height: 250px;
+    border-radius: 50%;
+    margin: 0;
+}

@@ -1,0 +1,19 @@
+div{
+    margin: 20px 40px;
+}
+
+.message{
+    width: 60%;
+}
+
+.file{
+    width: 30%;
+}
+button{
+    width: 10%;
+}
+
+.image{
+    width: 20%;
+    height: 20%;
+}

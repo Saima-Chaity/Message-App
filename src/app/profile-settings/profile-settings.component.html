@@ -1,0 +1,16 @@
+<div class="userProfile">
+  <div class="image">
+    <label for="imageUploader" class="btn-block btn-outlined">
+      <img class="defaultImage" *ngIf= "!url" src="assets/image/userImage.jpg" />
+      <img class="userImage" *ngIf= "url" [src]="url"> <br/>
+    </label>
+    <input class="file" type="file"
+    id="imageUploader" accept="image/*"
+    [(ngModel)]="file" 
+    (change)="onFileUpload($event)" 
+    /> 
+  </div>  
+  <button (click)= "save()">Save profile photo</button>
+  <p>{{userName}}</p>
+  <p>{{email}}</p>
+</div>

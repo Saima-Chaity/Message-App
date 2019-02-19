@@ -1,0 +1,29 @@
+.users{
+    border: 1px solid gainsboro;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    height: 100%;
+}
+
+.online{
+    border: 1px solid green;
+    display: inline-block;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 50%;
+    background: green;
+}
+
+.offline{
+    border: 1px solid grey;
+    display: inline-block;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 50%;
+    background: grey;
+}
+
+.userName{
+    display: inline-block;
+    padding-left: 15px;
+}

@@ -1,0 +1,64 @@
+.sender{
+    border: 1px solid gainsboro;
+    padding: 10px 10px;
+    background: skyblue;
+    margin: 10px 0px 10px 150px;
+    border-radius: 4%;
+}
+
+.receiver{
+    border: 1px solid gainsboro;
+    padding: 10px 10px;
+    background: salmon;
+    margin: 10px 150px 10px 0px;
+    border-radius: 4%;
+}
+
+.messageDetails p{
+    display: inline;
+}
+
+.userName{
+    color: green;
+    font-weight: bold;
+    padding: 0px 5px;
+}
+
+.email{
+    color: green;
+    font-weight: bold;
+    padding: 0px 5px;
+}
+
+.time{
+    font-weight: bold;
+    padding: 0px 5px;
+}
+
+button{
+    margin: 0px 10px;
+    float: right;
+}
+
+.image{
+    width: 20%;
+    height: 20%;
+    border: 3px ridge green;
+}
+
+.profilePhoto{
+    border: 2px solid gainsboro;
+    width: 10%;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.senderProfile > .profilePhoto{
+    float: right;
+    margin-right: -70px;
+}
+
+.receiverProfile > .profilePhoto{
+    float: left;
+    margin-left: -70px;
+}
