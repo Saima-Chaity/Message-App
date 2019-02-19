@@ -35,3 +35,28 @@ label{
 hr{
   width: 50%;
 }
+
+
+@media only screen and (max-width: 500px) {
+
+  .image{
+    border: 2px solid gainsboro;
+    width: 80%;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px auto;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  .image{
+    border: 2px solid gainsboro;
+    width: 30%;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px auto;
+  }
+
+}

@@ -12,7 +12,7 @@
 }
 
 .container > .feed{
-    width: 80%;
+    width: 100%;
     margin: 0 60px;
 }
 
@@ -31,4 +31,67 @@ p{
 
 hr{
   width: 50%;
+}
+
+
+@media only screen and (max-width: 10204px) {
+
+  .container{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px;
+  }
+
+}
+
+@media only screen and (max-width: 970px) {
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .container > .userProfile{
+    width: 40%;
+  }
+
+}
+
+@media only screen and (max-width: 470px) {
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .container > .userProfile{
+    width: 70%;
+  }
+
+  .container > .feed{
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid gainsboro;
+  }
+
+  .container > .userList{
+    width: 60%;
+  }
+
+  .chatForm{
+    width: 100%;
+    margin: 0px auto;
+  }
+
 }
