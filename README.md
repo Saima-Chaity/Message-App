@@ -1,27 +1,25 @@
-# Chatapp
+# Message-App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+This is a simple message application which allows authenticated users to send text messages and images.
 
-## Development server
+### Demo : [Project Link](https://angularmessageapp.azurewebsites.net/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Features:
 
-## Code scaffolding
+- Login / Signup 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- User profile settings
 
-## Build
+- Send simple text messages and images
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Available user list
 
-## Running unit tests
+### Screenshots :
+**Chat-room page :**
+<img width="1262" alt="screen shot 2019-02-19 at 1 10 52 pm" src="https://user-images.githubusercontent.com/31779751/53050725-d78dd200-344e-11e9-9076-4607ef0b88ce.png">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**User profile settings :**
+<img width="1257" alt="screen shot 2019-02-19 at 1 14 20 pm" src="https://user-images.githubusercontent.com/31779751/53050752-ed02fc00-344e-11e9-8da5-1972482113e7.png">
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+**Login page :**
+<img width="1260" alt="screen shot 2019-02-19 at 1 12 38 pm" src="https://user-images.githubusercontent.com/31779751/53050869-2c314d00-344f-11e9-86e3-807c8d94a9a4.png">
