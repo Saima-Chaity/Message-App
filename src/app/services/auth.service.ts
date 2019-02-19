@@ -49,7 +49,7 @@ export class AuthService {
   }
 
   logout() {
-    this.setUserSatus('offline');
+    this.updateUserSatus('offline');
     this.signupAttempt = 0;
     this.afAuth.auth.signOut();
     this.router.navigate(['login']);
@@ -85,6 +85,18 @@ export class AuthService {
     } else {
       this.userId = sessionStorage.getItem('userId');
       return this.authState !== null ? this.userId : this.authState.uid;
+    }
+  }
+
+  updateUserSatus(status: string) {
+    if (sessionStorage.getItem('userId')) {
+      this.userId = sessionStorage.getItem('userId');
+
+      const path = `users/${this.userId}`;
+      const data = {
+        status: status
+      };
+      return this.db.object(path).update(data);
     }
   }
 

@@ -31,3 +31,7 @@ label{
     border-radius: 50%;
     margin: 0;
 }
+
+hr{
+  width: 50%;
+}

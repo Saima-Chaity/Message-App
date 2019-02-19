@@ -6,11 +6,18 @@
     </label>
     <input class="file" type="file"
     id="imageUploader" accept="image/*"
-    [(ngModel)]="file" 
-    (change)="onFileUpload($event)" 
-    /> 
-  </div>  
+    [(ngModel)]="file"
+    (change)="onFileUpload($event)"
+    />
+  </div>
   <button (click)= "save()">Save profile photo</button>
   <p>{{userName}}</p>
   <p>{{email}}</p>
+
+  <a href="/chat">Back to chat-room</a>
+
+  <hr>
+  <p>© 2018 - Saima Chaity</p>
+
 </div>
+

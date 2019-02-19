@@ -5,7 +5,7 @@
   </div>
   <p *ngIf = "messageContent" class="messageContent">{{messageContent}}</p>
   <img class="image" *ngIf = "url" [src]="url"/>
-  <div class="messageDetails">
+  <div style="clear:both;" class="messageDetails">
       <p>Sent By</p>
       <p class="userName" *ngIf = "userEmail || userName">{{userName}}</p>
       <p class="email" *ngIf = "!userName">{{userEmail}}</p>
