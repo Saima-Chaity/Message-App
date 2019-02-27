@@ -4,6 +4,15 @@ This is a simple message application which allows authenticated users to send te
 
 ### Demo : [Project Link](https://angularmessageapp.azurewebsites.net/)
 
+### Technology Stack:
+- Angular
+
+- Firebase
+
+- Bootstrap
+
+- Azure Devops
+
 ### Features:
 
 - Login / Signup 
