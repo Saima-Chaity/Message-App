@@ -37,14 +37,13 @@ export class AuthService {
 
   login(email: string, password: string) {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
-      .then((curresntuser) => {
-        this.uid = curresntuser.user.uid;
-        this.authState = curresntuser;
+      .then((currentUser) => {
+        this.uid = currentUser.user.uid;
+        this.authState = currentUser;
         this.signupAttempt = 1;
         this.setUserSatus('online');
-        this.getUserDetails(curresntuser.user.uid);
-        this.router.navigate(['chat']);
-        window.location.reload();
+        this.getUserDetails(currentUser.user.uid);
+        this.router.navigate(['/chat']);
     });
   }
 
@@ -52,19 +51,17 @@ export class AuthService {
     this.updateUserSatus('offline');
     this.signupAttempt = 0;
     this.afAuth.auth.signOut();
-    this.router.navigate(['login']);
-    window.location.reload();
   }
 
   signup(email: string, userName: string, password: string) {
     return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
       .then((signedInUser) => {
+        console.log(signedInUser);
         this.signedInUserId = signedInUser.user.uid;
         this.signupAttempt = 1;
         this.authState = signedInUser;
         const status = 'online';
         this.setUserData(email, userName, status);
-        window.location.reload();
     });
   }
 
