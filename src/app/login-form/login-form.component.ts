@@ -28,7 +28,7 @@ export class LoginFormComponent {
           if (this.users[i]['email'] === this.email) {
             this.authService.login(this.email, this.password)
             .then(resolve => this.router.navigate(['/chat']))
-            .then(reload => window.location.reload())
+            .then(reload => window.location.href = '/chat')
             .catch ();
             break;
           } else if ( i === this.users.length - 1) {

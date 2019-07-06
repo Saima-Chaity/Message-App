@@ -32,9 +32,8 @@ export class NavbarComponent implements OnInit {
 
   logout() {
     this.authService.logout();
-    this.router.navigate(['/login']);
-    console.log(this.user);
     sessionStorage.removeItem('userId');
-    window.location.replace('https://angularmessageapp.azurewebsites.net/');
+    this.router.navigate(['/login']);
+    window.location.href = '/login';
   }
 }

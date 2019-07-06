@@ -23,7 +23,7 @@ export class SignupFormComponent implements OnInit {
     const userName = this.userName;
     this.authService.signup(email, userName, password)
     .then(resolve => this.router.navigate(['/chat']))
-    .then(reload => window.location.reload())
+    .then(reload => window.location.href = '/chat')
     .catch (
       error => this.errorMessage = error.message
     );
