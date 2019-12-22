@@ -2,8 +2,6 @@
 
 This is a simple message application which allows authenticated users to send text messages and images. Please checkout the short video on [**YouTube**](https://youtu.be/5wabMG7HTu0) to get an quick overview of the application.
 
-### Demo : [Project Link](https://angularmessageapp.azurewebsites.net/)
-
 ### Technology Stack:
 - Angular
 
